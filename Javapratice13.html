@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<input type="text" placeholder="Username" id="un">
+<br>
+<br>
+<input type="text" placeholder="Password" id="ps">
+<br>
+<br>
+<button onclick="login()">LogIn</button>
+<script type="text/javascript">
+	function login() {
+		var u = document.getElementById('un').value
+		var p = document.getElementById('ps').value
+		if (u=="kanden"&&p==1234) {
+          alert("Successfully logged in")
+		} else {
+          alert("Login failed")
+		}
+	}
+</script>
+</body>
+</html>
