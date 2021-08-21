@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+            function plus(a,b) {
+                return (a + b);
+            }
+
+            function minus(a,b) {
+                return (a - b);
+            }
+
+            function multiply(a,b) {
+                return (a * b);
+            }
+
+            function divide(a,b) {
+                return (a / b);
+            }
+
+            function calc() {
+                var w;
+                var x = parseInt(document.getElementById("oper1").value);
+                var y = parseInt(document.getElementById("operx").value);
+                var z = parseInt(document.getElementById("oper2").value)
+
+                switch (y) {
+                    case 0:
+                        w = plus(x, z);
+                document.getElementById("resul").innerHTML=w;
+                        break;
+                    case 1:
+                        w = minus(x, z);
+                document.getElementById("resul").innerHTML=w;
+                        break;
+                    case 2:
+                        w = multiply(x, z);
+                document.getElementById("resul").innerHTML=w;
+                        break;
+                    case 3:
+                        w = divide(x, z);
+                document.getElementById("resul").innerHTML=w;
+                        break;
+                    default:
+                        w = "Don't really know..";
+                }
+
+            }
+</script>
+<input type="text" id="oper1" value="">
+<select id="operx">
+    <option value="0"><h1>+</h1></option>
+    <option value="1"><h1>-</h1></option>
+    <option value="2"><h1>x</h1></option>
+    <option value="3"><h1>÷</h1></option>
+</select>
+<input type="text" id="oper2" value="">
+<input type="button" onClick="calc();" value="="><br/><br/>
+<h1 id="resul">The answer is : </h1>
+
+</body>
+</html>
